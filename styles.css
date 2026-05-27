@@ -44,7 +44,7 @@ ul { list-style: none; }
 input, select, textarea, button { font-family: inherit; }
 
 .container {
-    max-width: 1180px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 24px;
 }
@@ -521,7 +521,7 @@ h3 { font-size: 1rem; }
 /* ================================================
    SECCIÓN BASE
 ================================================ */
-.section { padding: 96px 0; }
+.section { padding: 2rem 0; }
 .section--soft { background: var(--fondo-suave); }
 .section--dark { background: var(--primario); }
 
@@ -1299,7 +1299,7 @@ a.contact-item:hover {
     .hero__visual { order: -1; }
     .hero__mini-card { display: none; }
 
-    .section { padding: 72px 0; }
+    .section { padding: 2rem 0; }
     .section-header { margin-bottom: 36px; }
 
     .catalog-grid { grid-template-columns: 1fr; }
