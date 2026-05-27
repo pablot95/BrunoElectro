@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bruno.electro — Electrodomésticos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ================================================
+     NAVBAR
+================================================ -->
+<header class="navbar" id="navbar">
+    <div class="container">
+        <nav class="navbar__inner">
+            <a href="#" class="navbar__logo">Bruno<span>.electro</span></a>
+
+            <div class="navbar__links" id="navLinks">
+                <a href="#inicio">Inicio</a>
+                <a href="#catalogo">Catálogo</a>
+                <a href="#beneficios">Nosotros</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+
+            <div class="navbar__actions">
+                <button class="cart-btn" id="cartBtn" aria-label="Carrito de compras">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                    </svg>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <a href="https://wa.me/5491100000000" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn-nav">
+                    💬 Consultá
+                </a>
+                <button class="navbar__burger" id="burger" aria-label="Menú">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- ================================================
+     HERO
+================================================ -->
+<section class="hero" id="inicio">
+    <div class="hero__bg-shapes">
+        <div class="hero__circle hero__circle--1"></div>
+        <div class="hero__circle hero__circle--2"></div>
+    </div>
+    <div class="container">
+        <div class="hero__inner">
+            <div class="hero__content reveal">
+                <div class="hero__badge">
+                    <span class="pulse-dot"></span>
+                    Envíos a todo el país
+                </div>
+                <h1>Electrodomésticos<br>para tu <span class="highlight">hogar</span></h1>
+                <p class="hero__sub">Encontrá todo lo que necesitás: línea blanca, climatización y pequeños electrodomésticos. Calidad, precio y atención personalizada.</p>
+                <div class="hero__cta">
+                    <a href="#catalogo" class="btn btn--primary">Ver catálogo</a>
+                    <a href="https://wa.me/5491100000000" target="_blank" rel="noopener noreferrer" class="btn btn--ghost">Consultar por WhatsApp</a>
+                </div>
+                <div class="hero__trust">
+                    <span>✓ Envío gratis +$80.000</span>
+                    <span>✓ Cuotas sin interés</span>
+                    <span>✓ Garantía oficial</span>
+                </div>
+            </div>
+            <div class="hero__visual reveal-right">
+                <img src="images/electros.webp" alt="Electrodomésticos Bruno Electro" class="hero__image-only" loading="eager">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================================================
+     BANNER OFERTA
+================================================ -->
+<div class="promo-banner">
+    <div class="container">
+        <div class="promo-banner__inner">
+            <span class="promo-banner__tag">🔥 OFERTA</span>
+            <p>Hasta <strong>25% OFF</strong> en toda la línea blanca · <strong>Cuotas sin interés</strong> con todas las tarjetas · Envío gratis en compras mayores a $80.000</p>
+            <a href="#catalogo" class="promo-banner__cta">Ver ofertas →</a>
+        </div>
+    </div>
+</div>
+
+<!-- ================================================
+     CATÁLOGO
+================================================ -->
+<section class="section section--soft" id="catalogo">
+    <div class="container container--catalog">
+        <div class="section-header">
+            <div class="tag">Catálogo</div>
+            <p class="section-sub">Encontrá el electrodoméstico ideal para tu hogar al mejor precio.</p>
+        </div>
+
+        <div class="catalog-layout">
+            <aside class="catalog-filters reveal" aria-label="Filtros de catálogo">
+                <h3 class="catalog-filters__title">Filtrar por categoría</h3>
+                <div class="catalog-filters__list">
+                    <button class="cat-chip cat-chip--active" data-cat="todos">
+                        <span>🏠</span> Todos
+                    </button>
+                    <button class="cat-chip" data-cat="linea-blanca">
+                        <span>🧺</span> Línea Blanca
+                    </button>
+                    <button class="cat-chip" data-cat="climatizacion">
+                        <span>❄️</span> Climatización
+                    </button>
+                    <button class="cat-chip" data-cat="cocinas">
+                        <span>🍳</span> Cocinas
+                    </button>
+                    <button class="cat-chip" data-cat="pequenos">
+                        <span>⚡</span> Pequeños Electro
+                    </button>
+                </div>
+            </aside>
+
+            <div>
+                <div class="catalog-grid" id="catalogGrid">
+
+            <!-- Catálogo actualizado: solo 6 productos -->
+            <!-- 1. Aire acondicionado -->
+            <article class="product-card reveal" data-cat="climatizacion" style="--delay:.05s">
+                <div class="product-card__img product-card__img--sale">
+                    <img src="images/aire.webp" alt="Aire acondicionado" loading="lazy" style="width:100%;height:auto;border-radius:12px;">
+                    <div class="product-card__tag">Climatización</div>
+                    <div class="product-card__sale">-17%</div>
+                </div>
+                <div class="product-card__body">
+                    <h3>Aire Acondicionado Split 3000 Frig.</h3>
+                    <p>Frío/calor, inverter, WiFi incluido, silencioso</p>
+                    <div class="product-card__pricing">
+                        <span class="price-old">$480.000</span>
+                        <strong class="price-main">$399.900</strong>
+                    </div>
+                    <div class="product-card__cuotas">12 cuotas de $33.325</div>
+                    <div class="product-card__actions">
+                        <button class="btn-add" onclick="addToCart('aa-split-3000','Aire Acondicionado Split 3000 Frig.',399900,'🌡️')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                            Agregar
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 2. Cocina -->
+            <article class="product-card reveal" data-cat="cocinas" style="--delay:.1s">
+                <div class="product-card__img">
+                    <img src="images/cocinas.webp" alt="Cocina" loading="lazy" style="width:100%;height:auto;border-radius:12px;">
+                    <div class="product-card__tag">Cocinas</div>
+                </div>
+                <div class="product-card__body">
+                    <h3>Cocina Multigas 56cm</h3>
+                    <p>4 hornallas, horno autolimpiante, encendido eléctrico</p>
+                    <div class="product-card__pricing">
+                        <strong class="price-main">$259.900</strong>
+                    </div>
+                    <div class="product-card__cuotas">12 cuotas de $21.658</div>
+                    <div class="product-card__actions">
+                        <button class="btn-add" onclick="addToCart('cocina-multigas','Cocina Multigas 56cm',259900,'🍳')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                            Agregar
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 3. Heladera -->
+            <article class="product-card reveal" data-cat="linea-blanca" style="--delay:.15s">
+                <div class="product-card__img">
+                    <img src="images/heladera.jpg" alt="Heladera" loading="lazy" style="width:100%;height:auto;border-radius:12px;">
+                    <div class="product-card__tag">Línea Blanca</div>
+                </div>
+                <div class="product-card__body">
+                    <h3>Heladera No Frost 320L</h3>
+                    <p>Deshielo automático, freezer superior, eficiencia A+</p>
+                    <div class="product-card__pricing">
+                        <strong class="price-main">$499.900</strong>
+                    </div>
+                    <div class="product-card__cuotas">12 cuotas de $41.658</div>
+                    <div class="product-card__actions">
+                        <button class="btn-add" onclick="addToCart('heladera-nofrost','Heladera No Frost 320L',499900,'🧊')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                            Agregar
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 4. Lavarropas -->
+            <article class="product-card reveal" data-cat="linea-blanca" style="--delay:.2s">
+                <div class="product-card__img">
+                    <img src="images/lavarropa.jpg" alt="Lavarropas" loading="lazy" style="width:100%;height:auto;border-radius:12px;">
+                    <div class="product-card__tag">Línea Blanca</div>
+                </div>
+                <div class="product-card__body">
+                    <h3>Lavarropas Automático 8kg</h3>
+                    <p>15 programas, centrifugado 1200rpm, display digital</p>
+                    <div class="product-card__pricing">
+                        <strong class="price-main">$319.900</strong>
+                    </div>
+                    <div class="product-card__cuotas">12 cuotas de $26.658</div>
+                    <div class="product-card__actions">
+                        <button class="btn-add" onclick="addToCart('lavarropas-8kg','Lavarropas Automático 8kg',319900,'🧺')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                            Agregar
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 5. Microondas -->
+            <article class="product-card reveal" data-cat="pequenos" style="--delay:.25s">
+                <div class="product-card__img">
+                    <img src="images/microondas.jpg" alt="Microondas" loading="lazy" style="width:100%;height:auto;border-radius:12px;">
+                    <div class="product-card__tag">Pequeños</div>
+                </div>
+                <div class="product-card__body">
+                    <h3>Microondas Digital 20L</h3>
+                    <p>8 menús automáticos, función grill, descongelado rápido</p>
+                    <div class="product-card__pricing">
+                        <strong class="price-main">$99.900</strong>
+                    </div>
+                    <div class="product-card__cuotas">6 cuotas de $16.650</div>
+                    <div class="product-card__actions">
+                        <button class="btn-add" onclick="addToCart('microondas-20l','Microondas Digital 20L',99900,'🍲')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                            Agregar
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 6. Lavavajillas -->
+            <article class="product-card reveal" data-cat="linea-blanca" style="--delay:.3s">
+                <div class="product-card__img">
+                    <img src="images/lavavajillas.webp" alt="Lavavajillas" loading="lazy" style="width:100%;height:auto;border-radius:12px;">
+                    <div class="product-card__tag">Línea Blanca</div>
+                </div>
+                <div class="product-card__body">
+                    <h3>Lavavajillas 12 Cubiertos</h3>
+                    <p>5 programas de lavado, secado por condensación, A++</p>
+                    <div class="product-card__pricing">
+                        <strong class="price-main">$389.900</strong>
+                    </div>
+                    <div class="product-card__cuotas">12 cuotas de $32.491</div>
+                    <div class="product-card__actions">
+                        <button class="btn-add" onclick="addToCart('lavavajillas-12','Lavavajillas 12 Cubiertos',389900,'🍽️')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+                            Agregar
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+
+
+                </div><!-- /catalog-grid -->
+
+                <!-- CTA catálogo completo -->
+                <div class="catalog-footer reveal">
+                    <p>¿No encontraste lo que buscás?</p>
+                    <a href="https://wa.me/5491100000000?text=Hola!%20Quiero%20consultar%20por%20un%20producto" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+                        Consultá por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================================================
+     BENEFICIOS / NOSOTROS
+================================================ -->
+<section class="section" id="beneficios">
+    <div class="container">
+        <div class="beneficios-layout">
+            <div class="beneficios-info reveal">
+                <div class="tag">¿Por qué elegirnos?</div>
+                <h2>Comprar en Bruno.electro<br>es <span class="highlight">fácil y seguro</span></h2>
+                <p class="section-sub">Más de 5 años de experiencia en el rubro. Atención personalizada y productos con garantía oficial.</p>
+                <div class="beneficios-stats">
+                    <div class="bstat">
+                        <strong id="statClientes">2.400<span>+</span></strong>
+                        <span>Clientes satisfechos</span>
+                    </div>
+                    <div class="bstat">
+                        <strong>5<span> años</span></strong>
+                        <span>En el mercado</span>
+                    </div>
+                </div>
+            </div>
+            <div class="beneficios-grid">
+                <div class="benefit-card reveal" style="--delay:.05s">
+                    <h3>Envío a todo el país</h3>
+                    <p>Despachamos a toda Argentina. Envío gratis en compras superiores a $80.000.</p>
+                </div>
+                <div class="benefit-card reveal" style="--delay:.1s">
+                    <h3>Cuotas sin interés</h3>
+                    <p>Hasta 12 cuotas sin interés con las principales tarjetas de crédito.</p>
+                </div>
+                <div class="benefit-card reveal" style="--delay:.15s">
+                    <h3>Garantía oficial</h3>
+                    <p>Todos nuestros productos tienen garantía oficial de fábrica de 12 meses.</p>
+                </div>
+                <div class="benefit-card reveal" style="--delay:.2s">
+                    <h3>Atención personalizada</h3>
+                    <p>Asesoramiento por WhatsApp antes y después de tu compra, sin esperas.</p>
+                </div>
+                <div class="benefit-card reveal" style="--delay:.25s">
+                    <h3>Cambios y devoluciones</h3>
+                    <p>Política de cambio fácil dentro de los 30 días de recibido el producto.</p>
+                </div>
+                <div class="benefit-card reveal" style="--delay:.3s">
+                    <h3>Productos originales</h3>
+                    <p>Trabajamos únicamente con distribuidores oficiales. Sin réplicas ni importados sin aval.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================================================
+     CONTACTO / ZONA DE ENVÍOS
+================================================ -->
+<section class="section section--dark" id="contacto">
+    <div class="container">
+        <div class="contact-layout">
+            <div class="contact-info reveal">
+                <div class="tag tag--light">Contacto y envíos</div>
+                <h2 style="color:#fff;">¿Querés comprar o <span class="highlight">consultar algo</span>?</h2>
+                <p style="color:rgba(255,255,255,0.65);margin-top:12px;margin-bottom:32px;font-size:16px;line-height:1.75;">Escribinos por WhatsApp y te respondemos al instante. También podés mandarnos un mensaje y te contactamos a la brevedad.</p>
+
+                <div class="contact-items">
+                    <a href="https://wa.me/5491100000000" target="_blank" rel="noopener noreferrer" class="contact-item">
+                        <div class="contact-item__icon">💬</div>
+                        <div>
+                            <strong>WhatsApp</strong>
+                            <span>+54 9 11 0000-0000</span>
+                        </div>
+                    </a>
+                    <div class="contact-item">
+                        <div class="contact-item__icon">📍</div>
+                        <div>
+                            <strong>Zona de cobertura</strong>
+                            <span>Envíos a todo el país vía Andreani / OCA</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-item__icon">🕒</div>
+                        <div>
+                            <strong>Horario de atención</strong>
+                            <span>Lun–Vie 9 a 18hs · Sáb 9 a 13hs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-wrap reveal-right">
+                <form id="contactForm" class="contact-form" novalidate>
+                    <h3>Envianos un mensaje</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombre">Nombre *</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono *</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="11 0000-0000" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" placeholder="tucorreo@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="consulta">¿Qué producto te interesa?</label>
+                        <select id="consulta" name="consulta">
+                            <option value="">Seleccioná una categoría</option>
+                            <option>Línea blanca (heladeras, lavarropas)</option>
+                            <option>Climatización (AA, calefactores)</option>
+                            <option>Pequeños electrodomésticos</option>
+                            <option>TV y audio</option>
+                            <option>Otro / No sé todavía</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" placeholder="Contanos qué necesitás..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">Enviar mensaje</button>
+                    <p class="form-note">También podés escribirnos directamente por <a href="https://wa.me/5491100000000" target="_blank" rel="noopener noreferrer" style="color:var(--acento)">WhatsApp</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================================================
+     FOOTER
+================================================ -->
+<footer class="footer">
+    <div class="footer__inner container">
+        <div class="footer__brand">
+            <div class="footer__logo">Bruno<span>.electro</span></div>
+            <p>Electrodomésticos de calidad para tu hogar. Garantía oficial, envíos a todo el país y atención personalizada.</p>
+            <div class="footer__social">
+                <a href="#" aria-label="Instagram">📷</a>
+                <a href="#" aria-label="Facebook">👥</a>
+                <a href="https://wa.me/5491100000000" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">💬</a>
+            </div>
+        </div>
+        <div class="footer__links-col">
+            <strong>Categorías</strong>
+            <a href="#catalogo">Línea blanca</a>
+            <a href="#catalogo">Climatización</a>
+            <a href="#catalogo">Pequeños electro</a>
+            <a href="#catalogo">TV y audio</a>
+        </div>
+        <div class="footer__links-col">
+            <strong>Información</strong>
+            <a href="#beneficios">Sobre nosotros</a>
+            <a href="#contacto">Contacto</a>
+            <a href="#contacto">Zona de envíos</a>
+            <a href="#contacto">Garantías</a>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="container">
+            <span>© 2026 Bruno.electro · Todos los derechos reservados</span>
+            <span>Diseñado por <a href="https://gokywebs.net" target="_blank" rel="noopener noreferrer">GokyWebs</a></span>
+        </div>
+    </div>
+</footer>
+
+<!-- ================================================
+     CARRITO LATERAL
+================================================ -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-sidebar__header">
+        <h3>Tu carrito</h3>
+        <button class="cart-close" id="cartClose" aria-label="Cerrar carrito">✕</button>
+    </div>
+    <div class="cart-sidebar__body" id="cartBody">
+        <div class="cart-empty" id="cartEmpty">
+            <span>🛒</span>
+            <p>Tu carrito está vacío</p>
+        </div>
+    </div>
+    <div class="cart-sidebar__footer" id="cartFooter" style="display:none">
+        <div class="cart-total">
+            <span>Total:</span>
+            <strong id="cartTotal">$0</strong>
+        </div>
+        <p class="cart-note">Podés ajustar cantidades desde el carrito y consultarnos por WhatsApp cuando quieras.</p>
+    </div>
+</aside>
+
+<!-- Modal detalle de producto -->
+<div class="product-modal" id="productModal" aria-hidden="true">
+    <div class="product-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="productModalTitle">
+        <button class="product-modal__close" id="productModalClose" aria-label="Cerrar detalle">✕</button>
+        <div class="product-modal__media" id="productModalMedia"></div>
+        <div class="product-modal__content">
+            <span class="product-modal__cat" id="productModalCat"></span>
+            <h3 id="productModalTitle"></h3>
+            <p id="productModalDesc"></p>
+            <div class="product-modal__price" id="productModalPrice"></div>
+            <div class="product-modal__cuotas" id="productModalCuotas"></div>
+            <div class="product-modal__actions">
+                <div class="product-qty product-qty--modal">
+                    <button class="product-qty__btn" id="modalQtyDec" aria-label="Restar unidad">−</button>
+                    <span class="product-qty__value" id="modalQtyValue">1</span>
+                    <button class="product-qty__btn" id="modalQtyInc" aria-label="Sumar unidad">+</button>
+                </div>
+                <button class="btn btn--primary" id="modalAddToCart">Agregar al carrito</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- WhatsApp FAB -->
+<a class="whatsapp-fab" href="https://wa.me/5491100000000" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M11.998 2C6.477 2 2 6.484 2 12.017c0 1.987.588 3.842 1.603 5.404L2 22l4.674-1.584A9.954 9.954 0 0 0 11.998 22C17.522 22 22 17.517 22 12.017 22 6.484 17.522 2 11.998 2z"/></svg>
+    <span>WhatsApp</span>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
